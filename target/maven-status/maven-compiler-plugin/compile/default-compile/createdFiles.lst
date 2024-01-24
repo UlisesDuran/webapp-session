@@ -1,0 +1,13 @@
+com\uduran\apiservlet\webapp\headers\services\LoginServiceCookieImpl.class
+com\uduran\apiservlet\webapp\headers\controllers\ProductoJsonServlet.class
+com\uduran\apiservlet\webapp\headers\controllers\LogoutServlet.class
+com\uduran\apiservlet\webapp\headers\services\ColorService.class
+com\uduran\apiservlet\webapp\headers\services\ProductoServiceImpl.class
+com\uduran\apiservlet\webapp\headers\services\LoginServiceHttpSessionImpl.class
+com\uduran\apiservlet\webapp\headers\controllers\CambiaColorServlet.class
+com\uduran\apiservlet\webapp\headers\controllers\ProductoXlsServlet.class
+com\uduran\apiservlet\webapp\headers\controllers\LoginServlet.class
+com\uduran\apiservlet\webapp\headers\services\ProductoService.class
+com\uduran\apiservlet\webapp\headers\services\LoginService.class
+com\uduran\apiservlet\webapp\headers\models\Producto.class
+com\uduran\apiservlet\webapp\headers\services\ColorServiceImpl.class
