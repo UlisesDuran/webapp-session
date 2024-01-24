@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
 
         LoginService loginService = new LoginServiceHttpSessionImpl();
         Optional<String> usernameOptional = loginService.getUsername(req);
+        HttpSession session = req.getSession();
 
         if (usernameOptional.isPresent()){
             resp.setContentType("text/html;charset=UTF-8");
@@ -31,10 +32,10 @@ public class LoginServlet extends HttpServlet {
                 out.println("<html>");
                 out.println("    <head>");
                 out.println("       <meta charset=\"UTF-8\">");
-                out.println("       <title>Hola " + usernameOptional.get() + "</title>");
+                out.println("       <title>Hola " + (session.getAttribute("nombre") != null? session.getAttribute("nombre"): "anónimo") + "</title>");
                 out.println("    </head>");
                 out.println("    <body>");
-                out.println("        <h1>Hola " + usernameOptional.get() + " has iniciado sesion exito! </h1>");
+                out.println("        <h1>Hola " + (session.getAttribute("nombre") != null? session.getAttribute("nombre"): "anónimo") + " has iniciado sesion exito! </h1>");
                 out.println("        <p><a href='" + req.getContextPath() + "/logout'>Cerrar sesión</a></p>");
                 out.println("        <p><a href='" + req.getContextPath() + "/index.jsp'>Volver</a></p>");
                 out.println("    </body>");

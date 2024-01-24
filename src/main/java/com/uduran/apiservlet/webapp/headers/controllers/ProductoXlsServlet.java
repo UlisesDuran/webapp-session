@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,6 +29,7 @@ public class ProductoXlsServlet extends HttpServlet {
         try (PrintWriter out = resp.getWriter()) {
 
             String servletPath = req.getServletPath();
+            HttpSession session = req.getSession();
             boolean isXls = servletPath.contains(".xls");
 
             if (isXls) {
@@ -47,7 +49,7 @@ public class ProductoXlsServlet extends HttpServlet {
                 out.println("        <p><a href=\"" + req.getContextPath() + "/productos.json" + "\">Mostrar Json</a></p>");
             }
             if (usernameOptional.isPresent()) {
-                out.println("<h3> Hola" + usernameOptional.get() + " bienvenido de nuevo! </h3>");
+                out.println("<h3> Hola " + (session.getAttribute("nombre") != null? session.getAttribute("nombre"): "anónimo") + " bienvenido de nuevo! </h3>");
             }
             out.println("        <table>");
             out.println("        <tr>");

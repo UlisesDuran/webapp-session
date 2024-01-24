@@ -6,6 +6,7 @@ com\uduran\apiservlet\webapp\headers\services\ProductoServiceImpl.class
 com\uduran\apiservlet\webapp\headers\services\LoginServiceHttpSessionImpl.class
 com\uduran\apiservlet\webapp\headers\controllers\CambiaColorServlet.class
 com\uduran\apiservlet\webapp\headers\controllers\ProductoXlsServlet.class
+com\uduran\apiservlet\webapp\headers\controllers\GuardarNombreSessionServlet.class
 com\uduran\apiservlet\webapp\headers\controllers\LoginServlet.class
 com\uduran\apiservlet\webapp\headers\services\ProductoService.class
 com\uduran\apiservlet\webapp\headers\services\LoginService.class
