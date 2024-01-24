@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cabeceras HTTP</title>
+    <title>HTTP Sessions</title>
     <style>
         a{
             color: ${cookie.color.getValue() == null? "black": cookie.color.getValue()};
